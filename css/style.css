@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+.cabezal {
+    padding: 80px 0;
+    background-color: rgb(155, 211, 252);
+    text-align: center;
+}
+
+.cabezal h1,
+.cabezal p {
+    padding-bottom: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.cabezal h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.hero-image {
+    background-image: url(../img/banner01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #eee;
+}
+
+.contenedor-bar {
+    padding: 20px 20px;
+    background-color: black;
+}
+
+.contendor-bar>.bar {
+    position: fixed;
+    width: 100vw;
+}
+
+.contenedor-bar>.bar>.enlace {
+    display: none;
+    /*display: flex;
+    flex-direction: column;*/
+}
+
+.contenedor-bar>.bar>.enlace>li>a {
+    text-decoration: none;
+    color: white;
+    padding: 0 20px;
+}
+
+.contenedor-bar>.bar>.enlace>li>a:hover {
+    font-size: larger;
+}
+
+
+/*Menu desplegable*/
+
+.enlace-desplegable ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.enlace-desplegable a {
+    display: block;
+    padding: 0.5em;
+    background-color: black;
+    text-decoration: none;
+    color: white;
+}
+
+.enlace-desplegable ul li a {
+    color: white;
+}
+
+.enlace-desplegable a:hover {
+    background-color: gray;
+}
+
+.enlace-desplegable ul li ul {
+    display: none;
+}
+
+.enlace-desplegable ul li a:hover+ul,
+.enlace-desplegable ul li ul:hover {
+    display: block;
+}
+
+
+/*------*/
+
+.pie {
+    background-color: gray;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pie a {
+    text-decoration: none;
+    color: white;
+    padding-left: 5px;
+}
+
+.pie h3,
+h5 {
+    padding: 5px 0;
+}
+
+.pie .redes-sociales img {
+    width: 15px;
+    height: 15px;
+}
+
+.contenedor-ppal {
+    /*width: 98vw;*/
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor-ppal>.servicios img,
+.contenedor-ppal>.proyectos img {
+    width: 100%;
+    height: 100%;
+}
+
+.item {
+    padding: 25px 0;
+}
+
+.item p {
+    padding: 15px 0;
+    text-align: justify;
+}
+
+.item .boton-personalizado {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #005BBB;
+    border-color: #d8d8d8;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 35px;
+}
+
+.item .boton-personalizado:hover {
+    background-color: #4e8aca;
+    font-size: 25px;
+}
+
+.nosotros {
+    background-color: rgba(128, 128, 128, 0.2);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nosotros>.item {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.nosotros>.item img {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (min-width: 600px) {
+    .cabezal h1 {
+        font-size: 2.8em;
+        /*font-weight: bold;*/
+    }
+    .item h4 {
+        font-size: 1.3em;
+    }
+    .item h1 {
+        font-size: 1.8em;
+    }
+    .item .boton-personalizado-2 {
+        font-size: 20px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .item .boton-personalizado-2:hover {
+        font-size: 30px;
+    }
+    .enlace-desplegable {
+        display: none;
+    }
+    .contenedor-bar>.bar>.enlace {
+        display: flex;
+        flex-direction: row;
+    }
+    .contenedor-bar>.bar>.enlace>.right {
+        margin-left: auto;
+    }
+    .contenedor-ppal {
+        flex-direction: row;
+        justify-content: space-evenly;
+        background-color: rgb(218, 214, 214);
+        padding: 0;
+    }
+    .contenedor-ppal>.servicios,
+    .contenedor-ppal>.proyectos {
+        padding: 0 30px;
+    }
+    .contenedor-ppal>.servicios {
+        width: 40%;
+    }
+    .contenedor-ppal>.proyectos {
+        width: 60%;
+        background-color: rgb(155, 211, 252);
+    }
+    .pie {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .nosotros {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .nosotros>.item {
+        width: 50%;
+    }
+}
